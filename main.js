@@ -12,13 +12,31 @@ You can assume that the 2nd number passed in will always be greater than the fir
 Note: This problem should account for negative number input
 */
 
-function sumOfOdds(){
+function sumOfOdds(a, b){
+    console.log("Enter a Number: ");
+    int numA = input.nextInt();
+    int a = numA;
+
+    console.log("Enter another number: ");
+    int numB = input.nexInt();
+
+    int oddSum = 0;
+    
+    while (numA <= numB){
+
+        if ((numA%2) > 0){
+            oddSum += numA;
+        }
+            numA++;
+    }
+
+return sumOfOdds;
 
 }
 
 /* console.logs to test */
 console.log("sumOfOdds");
-console.log("////////////////////////////////////////////////////////////////////////////\n");
+console.log("The sum of all odd numbers between " + a + " and " + numB + " is " + oddSum);
 //Add console.logs here to test!  Feel free to format this section however you like
 
 console.log("\n////////////////////////////////////////////////////////////////////////////\n");
@@ -30,13 +48,23 @@ For exmaple arraySubtract([7,9],[2,6]) should return [5,3]
 You can assume the arrays that are being input are of the same length
 */
 
-function arraySubtract(){
+const arr1 = [2,3];
+const arr2 = [6,5];
 
-}
+function arraySubtract(arr1, arr2){
+    const res =[];
+    for (let i=0; i<arr1.length; i++){
+        const el = Math.abs((arr1[i] || 0) - (arr2[i] || 0));
+        res[i] = el;
+    };
+    return res;
+       
+};
+
 
 /* console.logs to test */
 console.log("arraySubtract");
-console.log("////////////////////////////////////////////////////////////////////////////\n");
+console.log(console.log(absDifference(arr1, arr2)));
 //Add console.logs here to test!  Feel free to format this section however you like
 
 console.log("\n////////////////////////////////////////////////////////////////////////////\n");
@@ -49,13 +77,18 @@ Add the second string to the end of the array
 Return the modified array
 */
 
-function surroundArray(){
+function surroundArray(string1, string2, array, newArray){
+    const string1 = [];
+    const array = [];
+    const string2 = [];
+    const newArray = [string1].concat(array);
 
 }
+return newArray; 
 
 /* console.logs to test */
 console.log("surroundArray");
-console.log("////////////////////////////////////////////////////////////////////////////\n");
+console.log(newArray);
 //Add console.logs here to test!  Feel free to format this section however you like
 
 console.log("\n////////////////////////////////////////////////////////////////////////////\n");
@@ -67,13 +100,23 @@ If there is nothing in the array, return an empty string ('')
 You can assume that no two strings will have the same length in the array
 */
 
-function longestString(){
-    
+function longestString(arr){
+    var arr = [];
+
+    var lgth = 0;
+    var longest;
+
+    for (var i =0; i<arr.length; i++){
+        if (arr[i].length>lgth){
+            var lgth = arr[i].length;
+            longest = arr[i];
+        }
+    }
 }
 
 /* console.logs to test */
 console.log("longestString");
-console.log("////////////////////////////////////////////////////////////////////////////\n");
+console.log(longest);
 //Add console.logs here to test!  Feel free to format this section however you like
 
 console.log("\n////////////////////////////////////////////////////////////////////////////\n");
@@ -85,13 +128,27 @@ If the letter in the original string is uppercase the letter in the output strin
 Do NOT use replaceAll or similar string methods.  If you are unsure what that means, ask before you use a string method!  (toUpperCase() and toLowerCase() should be all you need if anything)
 */
 
-function sToR(){
+function sToR(s, r){
+    for (int i=1; i<str.length; i++){
+
+        if (str[i-1]=='r' && str[i] == s){
+
+            str[i-1] = 's';
+            int j;
+            for (j =i; j<str.length -1; j++)
+                str[j] = str[j+1];
+                str[j] = ' ';
+        }
+    }
+    return
 
 }
 
 /* console.logs to test */
 console.log("sToR");
-console.log("////////////////////////////////////////////////////////////////////////////\n");
+console.log("The fixed code is: ");
+console.log(str);
+
 //Add console.logs here to test!  Feel free to format this section however you like
 
 console.log("\n////////////////////////////////////////////////////////////////////////////\n");
@@ -102,8 +159,25 @@ Write a function divisibleBy4And7 that takes in a number and returns true if it 
 If it is not, return false.
 */
 
-function divisibleBy4And7(){
+function divisibleBy4And7(x){
+    console.log("Enter an integer number:");
+        
+        int x;
+        x = input.nextInt();
+         if (x % 4==0){
+             console.log("The integer number you entered is divisible by 4");
+         }
+         else{
+             console.log("The integer number you entered is not divisible by 4");
+             if(x % 7==0){
+                 console.log("The integer number you entered is divisible by 7");
+             } 
+             else{
+                 console.log("The interger number you entered is not divisible by 7");
+             }
+        }
 
+    }
 }
 
 /* console.logs to test */
@@ -120,7 +194,12 @@ return true if the string contains both an exclamation point (!) AND a question 
 Return false if otherwise
 */
 
-function exclamationAndQuestion(){
+function exclamationAndQuestion(_input){
+    if (string.length === 1 && str.match(/[!,?]/i))
+        return true;
+    }else{
+        return false;
+    }
     
 }
 
@@ -138,13 +217,30 @@ No need to add the count of A and B together.  Again, we want an array with the 
 Your function should account for both cases (upper and lower) of each letter.
 */
 
-function countAB(){
+function countAB(arr){
+   arr=[A,A,b,b,c,c]
+
+   for (int i =0;i<n; i++){
+
+    if(a[i]==true)
+        continue;
+
+        int count = 1;
+        for (int j = i+1; j<n;j++){
+            if (arr[i] == arr[j]){
+                a[j]=true;
+                count++;
+            }
+        }
+   }
+    }
+return count;
 
 }
 
 /* console.logs to test */
 console.log("countAB");
-console.log("////////////////////////////////////////////////////////////////////////////\n");
+console.log(arr[i] + " " + count);
 //Add console.logs here to test!  Feel free to format this section however you like
 
 console.log("\n////////////////////////////////////////////////////////////////////////////\n");
@@ -157,13 +253,16 @@ Finally, return your modified array.
 Example: addStringIfLastS(['test', 'testing', 'testings'], 'TEST') => ['test', 'testing', 'testingsTEST']
 */
 
-function addStringIfLastS(){
-
+function addStringIfLastS(c,d){
+    c = addStringIfLastS(test, testing, tests, "TEST");
+    d = a.join("+");
 }
+
+return a;
 
 /* console.logs to test */
 console.log("addStringIfLastS");
-console.log("////////////////////////////////////////////////////////////////////////////\n");
+console.log("Final product: ");
 //Add console.logs here to test!  Feel free to format this section however you like
 
 console.log("\n////////////////////////////////////////////////////////////////////////////\n");
@@ -176,13 +275,30 @@ If the array is shorter than length 2, return undefined to the user
 You can assume that every number in the array will be unique
 */
 
-function twoSmallest(){
+function twoSmallest(int, arrA){
 
+    if (arrA.length<2){
+        console.log("Array size less than 2. Try again.");
+    }
+
+    int first = Integer.MAX_VALUE;
+    int second = Integer.MAX_VALUE;
+
+    for (int i =0; i < arrA.length; i++){
+        int current = arrA[i];
+        if(first>current){
+            second=first;
+            first=current;
+        }else if (second = current){
+            second = current;
+        }
+    }
+return current;
 }
 
 /* console.logs to test */
 console.log("twoSmallest");
-console.log("////////////////////////////////////////////////////////////////////////////\n");
+console.log("Smallest and 2nd smallest numbers are: ["+first+","+second]"");
 //Add console.logs here to test!  Feel free to format this section however you like
 
 console.log("\n////////////////////////////////////////////////////////////////////////////\n");
